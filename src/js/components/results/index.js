@@ -17,12 +17,10 @@ export default class Reasult extends stateContainer {
 
     if (!store.state.winner) {
       if (gameType == 1) {
-        console.log('woooooo')
         content = `
         <p class="waiting">select something</p>
       `
       } else {
-        console.log('llllll')
         content = `
         <button class="start"> Go! </button>
         <p class="waiting">Let them fight</p>
@@ -42,6 +40,7 @@ export default class Reasult extends stateContainer {
       } else {
         content = `
         <div class="play-again"></div>
+        <div class="choice-image draw"></div>
         <span>DRAW</span>
       `
       }

@@ -1,4 +1,4 @@
-import PubSub from './'
+import PubSub from './pubsub'
 
 describe('testing PubSub', () => {
   test('having event object', () => {

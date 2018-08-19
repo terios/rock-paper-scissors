@@ -16,11 +16,3 @@ players.render()
 const resultsComponent = document.querySelector('.results')
 const results = new Results({ element: resultsComponent })
 results.render()
-
-/*
-const player1 = new Player({ element: player1Elm });
-player1.render();
-
-const player2 = new Player({ element: player2Elm });
-player2.render();
-*/

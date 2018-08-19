@@ -1,5 +1,5 @@
 import config from '../config'
-import { getChoiceObj, randomChoice, getWinner } from '../lib/utils'
+import {getChoiceObj, randomChoice, getWinner} from '../lib/utils'
 
 export default {
   selectedGame (state, payload) {
@@ -8,7 +8,7 @@ export default {
     // update player type
     return {
       ...state,
-      game: { type: payload.gameType },
+      game: {type: payload.gameType},
       players: state.players.map((player, index) => {
         const newPlayer = payload.gameType == 1 ? 'human' : 'the com'
         return {
@@ -49,9 +49,16 @@ export default {
       }
       ready = 0
     }
-    return { ...state, players, ready, winner }
+    return {...state, players, ready, winner}
   },
   restartGame (state) {
-    return { ...state, ready: 0, winner: false }
+    return {
+      ...state, ready: 0, winner: false, players: state.players.map(player => {
+        return {
+          ...player,
+          choice: null
+        }
+      })
+    }
   }
 }

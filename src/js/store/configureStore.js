@@ -1,4 +1,4 @@
-import PubSub from '../pubsub'
+import PubSub from '../lib/pubsub'
 
 export default class Store {
   constructor (params) {
@@ -23,6 +23,7 @@ export default class Store {
         }
         // Reset the status ready for the next operation
         self.status = 'resting'
+        console.log(state)
         return true
       }
     })
@@ -74,7 +75,7 @@ export default class Store {
     // update state only if we have a difference // could also use deep equal
     if (JSON.stringify(newState) !== JSON.stringify(self.state)) {
       // merge the new state with what we already had
-      self.state = Object.assign(self.state, newState) // TODO: check with spread later
+      self.state = Object.assign(self.state, newState)
     }
     return true
   }

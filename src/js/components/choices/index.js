@@ -14,11 +14,11 @@ export default class Choices extends stateContainer {
   render () {
     let self = this
     let content = ''
-    const props = self.props
-    if (props.selected) {
+    self.props
+    if (self.props.selected) {
       content = `
-            <div class="choice single" value="${props.selected.name}">
-              <img src=${props.selected.img}>
+            <div class="choice single" value="${self.props.selected.name}">
+              <img src=${self.props.selected.img}>
             </div>`
     } else {
       content = `${config.choices

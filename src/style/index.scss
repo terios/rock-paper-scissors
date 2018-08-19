@@ -1,6 +1,7 @@
 body {
   background-color: #dc3e3e;
   font-family: sans-serif;
+  margin: 0px 10px;
   .gameBoard {
     max-width: 1000px;
     margin: auto;
@@ -14,7 +15,7 @@ body {
   }
 
   .results {
-    width: fit-content;
+    max-width: 350px;
     margin: auto;
   }
 }

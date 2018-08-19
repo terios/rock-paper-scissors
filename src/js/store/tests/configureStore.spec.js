@@ -1,5 +1,5 @@
 import ConfigureStore from '../configureStore'
-import PubSub from '../../pubsub'
+import PubSub from '../../lib/pubsub'
 
 console.warn = jest.fn()
 console.error = jest.fn()
