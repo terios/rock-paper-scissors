@@ -1,0 +1,20 @@
+body {
+  background-color: #dc3e3e;
+  font-family: sans-serif;
+  .gameBoard {
+    max-width: 1000px;
+    margin: auto;
+    // padding: 10% 0;
+  }
+
+  .players {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .results {
+    width: fit-content;
+    margin: auto;
+  }
+}
