@@ -8,7 +8,7 @@ const element = {
 
 describe('testing Player Component', () => {
   test('having Element attribute', () => {
-    const player = new Player({})
+    const player = new Player({element})
     expect(player.hasOwnProperty('element')).toBeTruthy()
   })
   test('having Element contain our html code', () => {
