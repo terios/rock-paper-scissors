@@ -32,6 +32,8 @@ export default {
       return item
     })
 
+    // TODO: this part can be moved to a middlware that checks if both players have made their choice, 
+    // and dispatch an action for getting the winner 
     // if all player have finished, check who won
     let winner = false
     if (ready == state.players.length) {
