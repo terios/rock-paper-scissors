@@ -2,5 +2,5 @@ language: node_js
 node_js:
   - "iojs"
   - "8.9.4"
- script:
+script:
   - npm run test
