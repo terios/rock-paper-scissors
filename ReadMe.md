@@ -22,3 +22,15 @@ to one of these options:
 - export default bootsedGame
 
 you can also add you own rules and motion icons for it.
+
+
+### Future improvement
+- add support for middlewares, (for example once both player made their choice, the middleware triggers an action to get who is the winner)
+- add battle royal mode, maybe you want to be crazy and battle agains 100 other coms (lel)
+
+### Real multiplayer mode
+in order to have multiplayer, some things need to be added, here is the plan, or first draft for it:
+- use node server along side sockets
+- have pool of players on add state for each one (isReady, isPlaying)
+- use sockets to communication actions done by the players e.g. (when a player makes a choice, his store/state is updated, and a middleware that listens to specific actions sends the action to server, for the server state to be updated, and server relays same action via socket to the other player)
+- add battle royal with real persons (am a fan of battle royals :D )
