@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/terios/rock-paper-scissors.svg?branch=master)](https://travis-ci.org/terios/rock-paper-scissors)
+
 # ROCK PAPER SCISSORS
 implementation of the game rock paper scissors using pure es6, jest for unit test.
 the approach is similar to the stack react/redux. using pubsub for communication between components and the state
