@@ -3,10 +3,7 @@ export function randomChoice (choices = []) {
 }
 
 export function getChoiceObj (choices = [], value) {
-  const choice = choices.filter(elm => {
-    if (elm.name == value) {
-      return elm
-    }
+  const choice = choices.filter(elm => elm.name == value
   })
 
   return choice.length === 1 ? choice[0] : ''
