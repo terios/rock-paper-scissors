@@ -1,7 +1,6 @@
 import Reducers from '../reducers'
 import config from '../../config'
 import InitialState from '../initialState'
-import initialState from '../initialState'
 
 const choices = config.choices
 describe('testing Reducers', () => {
@@ -13,12 +12,12 @@ describe('testing Reducers', () => {
 
   test('test reducer selectedGame exucution com vs com and player vs com', () => {
     // checking existance
-    let payload = { gameType: 2 }
+    let payload = {gameType: 2}
     let newState = Reducers.selectedGame(InitialState, payload)
     expect(newState.game.type).toEqual(2)
     expect(newState.players[0].type).toEqual('the com')
 
-    payload = { gameType: 1 }
+    payload = {gameType: 1}
     newState = Reducers.selectedGame(newState, payload)
     expect(newState.game.type).toEqual(1)
     expect(newState.players[0].type).toEqual('human')
@@ -52,6 +51,17 @@ describe('testing Reducers', () => {
     const newState = Reducers.selectedChoice(InitialState, payload)
 
     const freshState = Reducers.restartGame(newState)
-    expect(freshState).toEqual(initialState)
+    const restardedGameState = {
+      'game': {'type': 1},
+      'players': [{
+        'avatar': 'images/player/human.png',
+        'choice': null,
+        'score': 0,
+        'type': 'human'
+      }, {'avatar': 'images/player/ai.png', 'choice': null, 'score': 0, 'type': 'com'}],
+      'ready': 0,
+      'winner': false
+    }
+    expect(freshState).toEqual(restardedGameState)
   })
 })
