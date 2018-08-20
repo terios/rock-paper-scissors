@@ -23,7 +23,8 @@ describe('testing PubSub', () => {
     test('execute all callbacks when registered event has been found', () => {
       const pubsubInstance = new PubSub()
 
-      const data = { test: 'test data' }
+      const data = {test: 'test data'}
+      const callbackCount = pubsubInstance.subscribe('testEvent', (data) => {return data})
       let result = pubsubInstance.publish('testEvent', data)
       expect(result).toEqual([data])
     })
